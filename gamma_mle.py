@@ -69,7 +69,7 @@ args_parser=parse_arguments()
 def run():
     gamma=GammaMLE()
     
-    data=np.random.gamma(args_parser.alpha, 1.0/args_parser.beta, 100000)
+    data=np.random.gamma(args_parser.alpha, 1.0/args_parser.beta, args_parser.n)
 
     gamma.mle(data)
 
